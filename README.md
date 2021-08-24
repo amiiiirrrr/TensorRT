@@ -15,16 +15,16 @@ The core of NVIDIA TensorRT is a C++ library that facilitates high performance i
 # TF-TRT Workflow
 The following diagram shows the typical workflow in deploying a trained model for inference.
 
-![Capture](https://user-images.githubusercontent.com/28767607/130687566-e2b8ca72-f729-498d-aef6-c735defc3397.PNG)
+<img src=https://user-images.githubusercontent.com/28767607/130687566-e2b8ca72-f729-498d-aef6-c735defc3397.PNG width="300" height="200">
 
 In order to optimize the model using TF-TRT, the workflow changes to one of the following diagrams depending on whether the model is saved in SavedModel format or regular checkpoints. Optimizing with TF-TRT is the extra step that is needed to take place before deploying your model for inference.
 
-![Capture](https://user-images.githubusercontent.com/28767607/130687640-d039abb8-0b74-491a-a6ec-6c323a8a55b9.PNG)
+<img src=https://user-images.githubusercontent.com/28767607/130687640-d039abb8-0b74-491a-a6ec-6c323a8a55b9.PNG width="300" height="200">
 
 # Installing TF-TRT
 Compatible Tensorflow, cuda, cudnn and TensorRT versions is needed. To install use below instructions:
 
 ```console
 foo@bar:~$ whoami
-foo
+
 ```
