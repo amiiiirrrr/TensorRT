@@ -15,11 +15,11 @@ The core of NVIDIA TensorRT is a C++ library that facilitates high performance i
 # TF-TRT Workflow
 The following diagram shows the typical workflow in deploying a trained model for inference.
 
-<img src=https://user-images.githubusercontent.com/28767607/130687566-e2b8ca72-f729-498d-aef6-c735defc3397.PNG width="300" height="400">
+<img src=https://user-images.githubusercontent.com/28767607/130687566-e2b8ca72-f729-498d-aef6-c735defc3397.PNG width="500" height="200">
 
 In order to optimize the model using TF-TRT, the workflow changes to one of the following diagrams depending on whether the model is saved in SavedModel format or regular checkpoints. Optimizing with TF-TRT is the extra step that is needed to take place before deploying your model for inference.
 
-<img src=https://user-images.githubusercontent.com/28767607/130687640-d039abb8-0b74-491a-a6ec-6c323a8a55b9.PNG width="300" height="400">
+<img src=https://user-images.githubusercontent.com/28767607/130687640-d039abb8-0b74-491a-a6ec-6c323a8a55b9.PNG width="500" height="200">
 
 # Installing TF-TRT
 Compatible Tensorflow, cuda, cudnn and TensorRT versions is needed. To install use below instructions:
@@ -34,4 +34,20 @@ sudo apt install ./libnvinfer7_7.1.3-1+cuda11.0_amd64.deb
 
 sudo apt-get update
 
+```
+
+
+```
+# Install development and runtime libraries (~4GB)
+sudo apt-get install --no-install-recommends \
+cuda-11-0 \
+libcudnn8=8.0.4.30-1+cuda11.0 \
+libcudnn8-dev=8.0.4.30-1+cuda11.0
+```
+
+```
+# Install TensorRT. Requires that libcudnn8 is installed above.
+sudo apt-get install -y --no-install-recommends libnvinfer7=7.1.3-1+cuda11.0 \
+libnvinfer-dev=7.1.3-1+cuda11.0 \
+libnvinfer-plugin7=7.1.3-1+cuda11.0
 ```
